@@ -1,0 +1,28 @@
+{
+    "name": "syberisle/pipeline",
+    "description": "Pipeline implementation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Lundgren",
+            "email": "dlundgren@syberisle.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4" : {
+            "SyberIsle\\Pipeline\\" : "src"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "SyberIsle\\Pipeline\\Stub" : "spec/stub"
+        }
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^3.0@dev",
+        "henrikbjorn/phpspec-code-coverage": "^3.0@dev"
+    }
+}

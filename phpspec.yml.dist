@@ -1,0 +1,15 @@
+---
+suites:
+    pipeline_suite:
+        namespace: SyberIsle\Pipeline
+        psr4_prefix: SyberIsle\Pipeline
+
+extensions:
+    PhpSpecCodeCoverage\CodeCoverageExtension:
+        format:
+          - html
+          - clover
+          - text
+        output:
+          html: coverage
+          clover: coverage.xml
