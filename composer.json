@@ -9,7 +9,6 @@
             "email": "dlundgren@syberisle.net"
         }
     ],
-    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "psr-4" : {
@@ -22,7 +21,10 @@
         }
     },
     "require-dev": {
-        "phpspec/phpspec": "^3.0@dev",
-        "henrikbjorn/phpspec-code-coverage": "^3.0@dev"
+        "phpspec/phpspec": "^3.0",
+        "henrikbjorn/phpspec-code-coverage": "^3.0"
+    },
+    "scripts" : {
+        "test": "vendor/bin/phpspec run"
     }
 }
