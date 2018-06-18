@@ -1,10 +1,19 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Pipeline\SimpleBuilder
+ */
 namespace SyberIsle\Pipeline\Pipeline;
 
 use SyberIsle\Pipeline\Builder;
 use SyberIsle\Pipeline\Stage;
 
+/**
+ * Builder for a simple pipeline
+ *
+ * @package SyberIsle\Pipeline\Pipeline
+ */
 class SimpleBuilder implements Builder
 {
     /**

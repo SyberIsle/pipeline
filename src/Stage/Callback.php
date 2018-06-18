@@ -1,9 +1,19 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Stage\Callback
+ */
+
 namespace SyberIsle\Pipeline\Stage;
 
 use SyberIsle\Pipeline\Stage;
 
+/**
+ * Callback stage
+ *
+ * @package SyberIsle\Pipeline\Stage
+ */
 class Callback implements Stage
 {
     /**

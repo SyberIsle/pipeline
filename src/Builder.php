@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Builder
+ */
+
 namespace SyberIsle\Pipeline;
 
 interface Builder

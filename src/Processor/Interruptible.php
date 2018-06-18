@@ -1,10 +1,22 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Processor\Interruptible
+ */
+
 namespace SyberIsle\Pipeline\Processor;
 
 use SyberIsle\Pipeline\Pipeline;
 use SyberIsle\Pipeline\Processor;
 
+/**
+ * An interruptible processor
+ *
+ * Useful if you need to check for a value and not continue
+ *
+ * @package SyberIsle\Pipeline\Processor
+ */
 class Interruptible implements Processor
 {
     /**

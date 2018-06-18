@@ -1,11 +1,21 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Stage\Processor
+ */
+
 namespace SyberIsle\Pipeline\Stage;
 
 use SyberIsle\Pipeline\Pipeline;
 use SyberIsle\Pipeline\Processor\FingersCrossed;
 use SyberIsle\Pipeline\Stage;
 
+/**
+ * Proxy to another processor
+ *
+ * @package SyberIsle\Pipeline\Stage
+ */
 class Processor implements Stage
 {
     /**

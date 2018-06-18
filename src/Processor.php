@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Processor
+ */
+
 namespace SyberIsle\Pipeline;
 
 interface Processor

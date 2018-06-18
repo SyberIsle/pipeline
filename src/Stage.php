@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Stage
+ */
+
 namespace SyberIsle\Pipeline;
 
 interface Stage

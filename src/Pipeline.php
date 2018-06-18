@@ -1,8 +1,14 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Pipeline
+ */
+
 namespace SyberIsle\Pipeline;
 
 interface Pipeline
+    extends \IteratorAggregate
 {
     /**
      * Pipes the stage in to the pipeline

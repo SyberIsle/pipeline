@@ -1,12 +1,23 @@
 <?php
 
+/**
+ * @file
+ * Contains SyberIsle\Pipeline\Pipeline\Simple
+ */
+
 namespace SyberIsle\Pipeline\Pipeline;
 
 use SyberIsle\Pipeline\Pipeline;
 use SyberIsle\Pipeline\Stage;
 use SyberIsle\Pipeline\Stage\Callback;
 
-class Simple implements Pipeline
+/**
+ * Simple pipeline
+ *
+ * @package SyberIsle\Pipeline\Pipeline
+ */
+class Simple
+    implements Pipeline
 {
     /**
      * @var array
@@ -14,7 +25,7 @@ class Simple implements Pipeline
     protected $stages = array();
 
     /**
-     * BasicPipeline constructor.
+     * Simple Pipeline constructor.
      *
      * @param array <Pipeline|Stage|callable> $stages
      */
@@ -40,6 +51,18 @@ class Simple implements Pipeline
     }
 
     /**
+     * Implement Iterator
+     *
+     * @return \Generator|\Traversable
+     */
+    public function getIterator()
+    {
+        foreach ($this->stages as $stage) {
+            yield $stage;
+        }
+    }
+
+    /**
      * Returns the stages
      *
      * @return mixed|null
@@ -55,7 +78,7 @@ class Simple implements Pipeline
      * @param array                   $stages
      * @param Pipeline|Stage|callable $stage
      */
-    private function handleStage(&$stages, $stage)
+    protected function handleStage(&$stages, $stage)
     {
         if ($stage instanceof Pipeline) {
             $stages = array_merge($stages, $stage->stages());
