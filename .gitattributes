@@ -10,4 +10,3 @@
 /phpspec.yml.dist export-ignore
 /phpspec.no-coverage.yml export-ignore
 /CHANGELOG.md export-ignore
-/README.md export-ignore

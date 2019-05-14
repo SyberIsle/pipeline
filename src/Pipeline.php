@@ -13,13 +13,13 @@ interface Pipeline
     /**
      * Pipes the stage in to the pipeline
      *
-     * @param $stage
-     * @return self
+     * @param Pipeline|Stage|callable $stage
+     * @return Pipeline
      */
-    public function pipe($stage);
+    public function pipe($stage): Pipeline;
 
     /**
      * @return array<Stage>
      */
-    public function stages();
+    public function stages(): array;
 }

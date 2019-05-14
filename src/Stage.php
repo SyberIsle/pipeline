@@ -12,7 +12,7 @@ interface Stage
     /**
      * Processes the payload for this stage
      *
-     * @param $payload
+     * @param mixed $payload
      * @return mixed
      */
     public function process($payload);

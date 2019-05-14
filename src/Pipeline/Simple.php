@@ -40,9 +40,9 @@ class Simple
      * Create a new pipeline with an appended stage.
      *
      * @param Pipeline|Stage|callable $stage
-     * @return static
+     * @return Pipeline
      */
-    public function pipe($stage)
+    public function pipe($stage): Pipeline
     {
         $pipeline = clone $this;
         $this->handleStage($pipeline->stages, $stage);
@@ -65,9 +65,9 @@ class Simple
     /**
      * Returns the stages
      *
-     * @return mixed|null
+     * @return array<Stage>
      */
-    public function stages()
+    public function stages(): array
     {
         return $this->stages;
     }

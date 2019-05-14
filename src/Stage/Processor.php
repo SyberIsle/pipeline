@@ -37,7 +37,7 @@ class Processor implements Stage
     /**
      * Runs the payload through the callback
      *
-     * @param $payload
+     * @param mixed $payload
      * @return mixed
      */
     public function process($payload)

@@ -11,7 +11,7 @@ interface Processor
 {
     /**
      * @param Pipeline $pipeline
-     * @param          $payload
+     * @param mixed    $payload
      * @return mixed
      */
     public function process(Pipeline $pipeline, $payload);
