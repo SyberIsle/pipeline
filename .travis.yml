@@ -3,6 +3,7 @@ language: php
 php:
   - 7.2
   - 7.3
+  - 7.4
 
 sudo: false
 
@@ -14,7 +15,7 @@ matrix:
   fast_finish: true
 
 before_install:
-  - if [ "$TRAVIS_PHP_VERSION" != "7.3" ]; then mv phpspec.no-coverage.yml phpspec.yml; fi
+  - if [ "$TRAVIS_PHP_VERSION" != "7.4" ]; then mv phpspec.no-coverage.yml phpspec.yml; fi
 
 install:
   - travis_retry composer install --ignore-platform-reqs
@@ -24,4 +25,4 @@ script:
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
-  - if [ "$TRAVIS_PHP_VERSION" == "7.3" ]; then php ocular.phar code-coverage:upload --format=php-clover coverage.xml; fi
+  - if [ "$TRAVIS_PHP_VERSION" == "7.4" ]; then php ocular.phar code-coverage:upload --format=php-clover coverage.xml; fi
