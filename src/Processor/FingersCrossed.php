@@ -17,6 +17,9 @@ use SyberIsle\Pipeline\Processor;
  */
 class FingersCrossed implements Processor
 {
+    /**
+     * {@inheritDoc}
+     */
     public function process(Pipeline $pipeline, $payload)
     {
         foreach ($pipeline as $stage) {

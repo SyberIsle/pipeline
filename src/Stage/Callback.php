@@ -27,10 +27,7 @@ class Callback implements Stage
     }
 
     /**
-     * Runs the payload through the callback
-     *
-     * @param $payload
-     * @return mixed
+     * {@inheritDoc}
      */
     public function process($payload)
     {

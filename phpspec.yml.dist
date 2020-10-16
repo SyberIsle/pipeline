@@ -5,7 +5,7 @@ suites:
         psr4_prefix: SyberIsle\Pipeline
 
 extensions:
-    PhpSpecCodeCoverage\CodeCoverageExtension:
+    FriendsOfPhpSpec\PhpSpec\CodeCoverage\CodeCoverageExtension:
         format:
           - html
           - clover

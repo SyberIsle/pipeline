@@ -16,7 +16,7 @@ interface Builder
      * @throws \InvalidArgumentException When not a callable or a Stage object
      * @return Builder
      */
-    public function add($stage);
+    public function add($stage): Builder;
 
     /**
      * Build the pipeline object
@@ -24,5 +24,5 @@ interface Builder
      * @param string|null $class
      * @return Pipeline
      */
-    public function build($class = null);
+    public function build($class = null): Pipeline;
 }

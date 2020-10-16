@@ -4,9 +4,11 @@
  * @file
  * Contains SyberIsle\Pipeline\Pipeline\SimpleBuilder
  */
+
 namespace SyberIsle\Pipeline\Pipeline;
 
 use SyberIsle\Pipeline\Builder;
+use SyberIsle\Pipeline\Pipeline;
 use SyberIsle\Pipeline\Stage;
 
 /**
@@ -24,7 +26,7 @@ class SimpleBuilder implements Builder
     /**
      * {@inheritdoc}
      */
-    public function add($stage)
+    public function add($stage): Builder
     {
         if ($stage instanceof Stage) {
             $this->stages[] = $stage;
@@ -40,7 +42,7 @@ class SimpleBuilder implements Builder
     /**
      * {@inheritdoc}
      */
-    public function build($class = null)
+    public function build($class = null): Pipeline
     {
         $class = $class ?: Simple::class;
 
