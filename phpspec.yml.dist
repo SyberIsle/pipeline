@@ -7,7 +7,6 @@ suites:
 extensions:
     FriendsOfPhpSpec\PhpSpec\CodeCoverage\CodeCoverageExtension:
         format:
-          - html
           - clover
           - text
         output:
