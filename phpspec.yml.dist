@@ -11,5 +11,4 @@ extensions:
           - clover
           - text
         output:
-          html: coverage
           clover: coverage.xml

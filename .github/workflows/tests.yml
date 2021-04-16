@@ -37,13 +37,13 @@ jobs:
 
       - name: Static analysis
         if: matrix.analysis
-        run: vendor/bin/phpstan analyse src
+        run: composer stan
 
       - name: Tests
-        run: vendor/bin/phpunit --coverage-clover clover.xml
+        run: composer test
 
       - name: Upload Scrutinizer coverage
         if: matrix.analysis
         uses: sudo-bot/action-scrutinizer@latest
         with:
-          cli-args: "--format=php-clover clover.xml"
+          cli-args: "--format=php-clover coverage.xml"
