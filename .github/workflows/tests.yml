@@ -46,4 +46,4 @@ jobs:
         if: matrix.analysis
         uses: sudo-bot/action-scrutinizer@latest
         with:
-          - '--format=php-clover clover.xml'
+          cli-args: "--format=php-clover clover.xml"
