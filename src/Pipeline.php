@@ -7,8 +7,7 @@
 
 namespace SyberIsle\Pipeline;
 
-interface Pipeline
-    extends \IteratorAggregate
+interface Pipeline extends \IteratorAggregate
 {
     /**
      * Pipes the stage in to the pipeline

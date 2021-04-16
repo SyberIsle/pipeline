@@ -16,8 +16,7 @@ use SyberIsle\Pipeline\Stage\Callback;
  *
  * @package SyberIsle\Pipeline\Pipeline
  */
-class Simple
-    implements Pipeline
+class Simple implements Pipeline
 {
     /**
      * @var array
