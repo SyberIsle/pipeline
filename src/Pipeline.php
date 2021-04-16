@@ -7,6 +7,9 @@
 
 namespace SyberIsle\Pipeline;
 
+/**
+ * @extends \IteratorAggregate<int, Stage>
+ */
 interface Pipeline extends \IteratorAggregate
 {
     /**
@@ -18,7 +21,7 @@ interface Pipeline extends \IteratorAggregate
     public function pipe($stage): Pipeline;
 
     /**
-     * @return array<Stage>
+     * @return Stage[]
      */
     public function stages(): array;
 }

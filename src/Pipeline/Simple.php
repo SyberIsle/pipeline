@@ -19,14 +19,14 @@ use SyberIsle\Pipeline\Stage\Callback;
 class Simple implements Pipeline
 {
     /**
-     * @var array
+     * @var Stage[]
      */
     protected $stages = array();
 
     /**
      * Simple Pipeline constructor.
      *
-     * @param array <Pipeline|Stage|callable> $stages
+     * @param array<Pipeline|Stage|callable> $stages
      */
     public function __construct($stages = null)
     {
@@ -52,7 +52,7 @@ class Simple implements Pipeline
     /**
      * Implement Iterator
      *
-     * @return \Generator|\Traversable
+     * @return \Traversable<int, Stage>
      */
     public function getIterator()
     {
@@ -64,7 +64,7 @@ class Simple implements Pipeline
     /**
      * Returns the stages
      *
-     * @return array<Stage>
+     * @return Stage[]
      */
     public function stages(): array
     {
@@ -74,10 +74,10 @@ class Simple implements Pipeline
     /**
      * Handles merging or converting the stage to a callback
      *
-     * @param array                   $stages
+     * @param Stage[]                   $stages
      * @param Pipeline|Stage|callable $stage
      */
-    protected function handleStage(&$stages, $stage)
+    protected function handleStage(&$stages, $stage): void
     {
         if ($stage instanceof Pipeline) {
             $stages = array_merge($stages, $stage->stages());

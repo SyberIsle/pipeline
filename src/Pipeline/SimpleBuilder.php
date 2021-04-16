@@ -19,7 +19,7 @@ use SyberIsle\Pipeline\Stage;
 class SimpleBuilder implements Builder
 {
     /**
-     * @var array List of stages
+     * @var Stage[] List of stages
      */
     private $stages = array();
 
